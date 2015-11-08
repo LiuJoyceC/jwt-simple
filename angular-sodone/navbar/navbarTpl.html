@@ -1,0 +1,84 @@
+<nav ng-controller="sodocanNavbarController" class="fixed-navbar">
+
+      <!-- navbar -->
+      <div class="navbar-fixed">
+        <nav>
+          <div class="nav-thin-top"></div>
+          <div class="nav-wrapper z-depth-1 blue-bg col s12">
+              <a href="#!" class="logo-img"><img src="angular-sodone/images/logo-white.png"></a>
+              <span class="proj-title">{{projectName}}</span>
+              <ul class="right hide-on-med-and-down">
+                <li><form>
+                  <div class="input-field">
+                    <label for="search"><i class="fa fa-search right" style="font-size:23px"></i></label>
+                    <input id="search" type="search" required>
+                    <i class="material-icons">close</i>
+                  </div>
+                </form></li>
+                <li><i ng-click="showModal($event)" style="font-size:25px" class="fa fa-gear"></i></li>
+
+                <li>
+                  <span ng-click="showLoginModal($event)" ng-show="!authToken">Log In</span>
+                  <span ng-show="authToken">{{username}}</span>
+                </li>
+
+                <li style="margin-right: 50px">
+                  <span ng-click="showSignupModal($event)" ng-show="!authToken">Sign Up</span>
+                  <span ng-show="authToken" ng-click="signOut()">Sign Out</span>
+               </ul>
+          </div>
+          <!-- sub header -->
+  <!--         <div class="orange lighten-4 thin">
+          <div style="right:0">
+            
+                <ul>
+                  <li class="right">
+                    <a ng-class="styles.descriptions.style" ng-click="clickedContext('descriptions')" class="waves-effect waves-light btn contextBtn">DE</a>
+                  </li>
+                  <li class="right">
+                    <a ng-class="styles.examples.style" ng-click="clickedContext('examples')" class="waves-effect waves-light btn contextBtn">EX</a>
+                  </li>
+                  <li class="right">
+                    <a ng-class="styles.tips.style" ng-click="clickedContext('tips')" class="waves-effect waves-light btn contextBtn">TI</a>
+                  </li>                
+                </ul>
+          </div>
+          </div> -->
+        </nav>
+      </div>
+
+<!--
+    <div class="row"  style="height:inherit">
+      <div class="two columns" style="height:inherit" >
+        <div class="sodocan">Sodocan</div>
+      </div>
+      <div class="two columns" style="height:inherit">
+        <div class="title"> {{projectName}}</div>
+      </div>
+      <div class="eight columns">
+        <ul>
+          <li><button class='btn-active'>DE</button>
+              <button class='btn-active'>EX</button>
+              <button class='btn-active'>TI</button></li>
+          <li><label>Entry:</label></li>
+          <li><select>
+            <option>top</option>
+            <option>3</option>
+            <option>5</option>
+            <option>10</option>
+            <option>all</option>
+          </select></li>
+          <li><label>Comments:</label></li>
+          <li><select>
+            <option>top</option>
+            <option>3</option>
+            <option>5</option>
+            <option>10</option>
+            <option>all</option>
+          </select></li>
+          <ll><input type="search"></ll>
+        </ul>
+      </div>
+    </div>
+</nav>
+-->

@@ -1,0 +1,32 @@
+
+<div ng-controller='sodocanMethodCtrl' class="card grey lighten-5">
+  <div id="{{method.functionName}}">
+
+    <div class="card-header">
+      <span class="col s10">
+        <h3 class="inline">{{method.functionName}}</h3>
+        <span class="params">({{printReference('params')}}) {{printReference('returns')}} </span>
+      </span>
+
+      <span>
+        <ul>
+          <li class="right">
+            <a ng-class="styles.descriptions.style" ng-click="clickedContext('descriptions')" class="waves-effect waves-light contextBtn"><div>DE</div></a>
+          </li>
+          <li class="right">
+            <a ng-class="styles.examples.style" ng-click="clickedContext('examples')" class="waves-effect waves-light contextBtn"><div>EX</div></a>
+          </li>
+          <li class="right">
+            <a ng-class="styles.tips.style" ng-click="clickedContext('tips')" class="waves-effect waves-light contextBtn"><div>TP</div></a>
+          </li>
+        </ul>
+      </span>
+    </div>
+
+    <div class="col s12" ng-repeat='(explanationType, entryArray) in method.explanations'>
+      <div sodocan-explanation>
+      </div>
+    </div>
+
+  </div>
+</div>
